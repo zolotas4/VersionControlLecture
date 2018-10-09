@@ -3,7 +3,7 @@ Version Control
 
 Repository for Version Control lecture for University of York's SEPR module.
 
-Lecture is being held on 18-19 Oct 2017.
+Lecture is being held on 11-12 Oct 2018.
 
 © The slides and the practical session are inspired by Jose Calderon's work. Images are taken from wikimedia and pixabay and are labelled as free for reuse.
 
@@ -13,7 +13,7 @@ Why You're Here
 
 As you will find out if you skim the slides, Version Control Systems (VCSs from now on) are widely used nowadays to keep track of changes in code, enhance collaboration and keep backups. Many of you may had never heard this term before but don't worry, I firstly heard about VCSs 6 years after my first CS module at a university level so taking into account that you're 2nd years students I am sure that you will master them.
 
-This document includes instructions on the 1st, 2nd and 3rd part of the practical session that follows the theory. On the practical we will focus on the (maybe the most) widely used VCS named Git. SVN is popular as well so for those who prefer to use SVN instead of Git there's a file, called SVN-links.md (provide by Jose Calderon), where you can find useful resources for it. In case you want to share more resources on Git or SVN please drop me an email at amz502@york.ac.uk or submit them through a pull request in this Git project.
+This document includes instructions on the 1st, 2nd and 3rd part of the practical session that follows the theory. On the practical we will focus on the (maybe the most) widely used VCS named Git. SVN is popular as well so for those who prefer to use SVN instead of Git there's a file, called SVN-links.md (provide by Jose Calderon), where you can find useful resources for it. In case you want to share more resources on Git or SVN please drop me an email at thanos.zolotas@york.ac.uk or submit them through a pull request in this Git project.
 
 As shown in the slides, there are different GUIs for Git that can be used (and may make your life easier if you're not fan of the command line). I personally prefer to use GUIs and more specifically "SourceTree" which is available to download from [here.](https://www.sourcetreeapp.com/) For the 1st part of the practical we will work using the terminal as we need to perform simpler tasks. During the 2nd part where I will demostrate the collaborative aspects of Git I will use SourceTree.
 
@@ -32,14 +32,14 @@ If you're on Windows, most probably you will have Git installed. Click start and
 
 * If Git-Bash is installed you will see it in the results. Click the Git-Bash Terminal and you're ready to start (jump to section Configuration). 
 
-* If not, then you need to install it. The link for download is at the [Official Git Website.](http://git-scm.com/downloads). Pick the Windows Operating system, download and follow the instalation instructions. However, due to the admin restrictions on these machines you may not be able to install it in your student folder. If this is the case for you, please let me know and I will ask support to figure this out for you so you can use it later on. Butunfortunately for this practical you need to switch to Linux to use Git.
+* If not, then you need to install it. The link for download is at the [Official Git Website.](http://git-scm.com/downloads). Pick the Windows Operating system, download and follow the instalation instructions. However, due to the admin restrictions on these machines you may not be able to install it in your student folder. If this is the case for you, please let me know and I will ask support to figure this out for you so you can use it later on. But unfortunately for this practical you need to switch to Linux to use Git.
 
 Configuration
 -----------------
 
 Once you have Git installed, open up your terminal. On Linux, this is whatever
 terminal you happen to use, on Windows this means launching 'Git Bash' from the
-Start Menu and or Mac the Terminal app.
+Start Menu and on Mac the Terminal app.
 
 A big part of any version control system is enabling collaboration. For this
 reason Git needs to know your name and email, this is so that the people you
