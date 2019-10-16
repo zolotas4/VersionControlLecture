@@ -109,7 +109,7 @@ v] Now if we run the command `git status` we should see something very much like
 git status
 \# On branch master
 \#
-\# Initial commit
+\# No commits yet
 \#
 \# Changes to be committed:
 \#   (use "git rm --cached <file>..." to unstage)
@@ -118,7 +118,7 @@ git status
 \#
 ~~~
 
-What this is telling us is that we have no history so far ('Initial commit')
+What this is telling us is that we have no history so far ('No commits yet' or 'Initial commit')
 and a list of changes that will be commited *if* we commit.
 
 vi] The file is now tracked, but we need to commit it to the repository. This is done by the following command:
