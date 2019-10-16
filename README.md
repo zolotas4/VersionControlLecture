@@ -28,11 +28,11 @@ Installing Git
 
 If you're on Linux or Mac, then you're all set (jump to section Configuration).
 
-If you're on Windows, most probably you will have Git installed. Click start and write Git-Bash. 
+If you're on Windows, click start and write Git-Bash. 
 
 * If Git-Bash is installed you will see it in the results. Click the Git-Bash Terminal and you're ready to start (jump to section Configuration). 
 
-* If not, then you need to install it. The link for download is at the [Official Git Website.](http://git-scm.com/downloads). Pick the Windows Operating system, download and follow the instalation instructions. However, due to the admin restrictions on these machines you may not be able to install it in your student folder. If this is the case for you, please let me know and I will ask support to figure this out for you so you can use it later on. But unfortunately for this practical you need to switch to Linux to use Git.
+* If not, then you need to install it. The link for download is at the [Official Git Website.](http://git-scm.com/downloads). Pick the Windows Operating system, download and follow the instalation instructions (just click next on every screen to get the default settings). However, due to the admin restrictions on these machines you may not be able to install it in your machine. If this is the case for you, please let me know and I will ask support to figure this out for you so you can use it later on. But unfortunately for this practical you need to switch to Linux to use Git.
 
 Configuration
 -----------------
