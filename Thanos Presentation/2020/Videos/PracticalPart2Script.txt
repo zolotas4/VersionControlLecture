@@ -1,0 +1,560 @@
+1
+00:00:02,370 --> 00:00:06,750
+So this is the second part of this practical. In this part
+
+2
+00:00:06,750 --> 00:00:15,180
+we are going to work in a collaborative environment using a remote repository.
+
+3
+00:00:15,180 --> 00:00:19,890
+In this part I will start by using the graphical user interface provided by SourceTree
+
+4
+00:00:19,890 --> 00:00:30,830
+to manage Git repositories, and at some point I will invite another user, a collaborator to work with in parallel.
+
+5
+00:00:30,830 --> 00:00:37,800
+So first of all, in order to be able to collaborate, we need to have a remote, a global repository where everything is shareed.
+
+6
+00:00:37,800 --> 00:00:44,510
+There are different options for creating such a repository story. GitHub or BitBucket are two good options.
+
+7
+00:00:44,510 --> 00:00:51,860
+In these practical, we're going to work with GitHub. So we navigate to get Github.com and we sign in with our account.
+
+8
+00:00:51,860 --> 00:00:59,600
+And all we need to do is to create a new repository by clicking this button. Then we provide a name for this repository.
+
+9
+00:00:59,600 --> 00:01:07,100
+Let's name it, GitDemo and GitHub allows us to have this as a public or a private repository.
+
+10
+00:01:07,100 --> 00:01:17,430
+So let's keep it public for now. When we create the repository, GitHub creates one for us online, which is, of course, empty.
+
+11
+00:01:17,430 --> 00:01:23,070
+And it also provides us with a link to this remote repository. In order to be able
+
+12
+00:01:23,070 --> 00:01:27,540
+to clone, to get a copy of this remote repository, into our local file system
+
+13
+00:01:27,540 --> 00:01:35,850
+we open SourceTree and we click this clone from your URL button where we paste the URL that you are provided.
+
+14
+00:01:35,850 --> 00:01:41,520
+Then we need to select where in our file system we would like to have this repository stored.
+
+15
+00:01:41,520 --> 00:01:45,570
+Let's say that we would like to copy it into a folder that it's called Thanos.
+
+16
+00:01:45,570 --> 00:01:55,910
+We select this and we clone the repository. Now SourceTree has pulled the remote repository from GitHub.
+
+17
+00:01:55,910 --> 00:02:00,650
+If we navigate to our file system, we will see that it is actually empty.
+
+18
+00:02:00,650 --> 00:02:10,620
+And it only includes the hidden folder that has all the files that Git requires for versioning our repository.
+
+19
+00:02:10,620 --> 00:02:18,630
+Let's start doing what we've done in part one, create a file, stage it, commit it and push it this time to the remote repository.
+
+20
+00:02:18,630 --> 00:02:26,640
+So, we open our text editor and we create the file that we call README.md
+
+21
+00:02:26,640 --> 00:02:40,990
+into our local file system. And we save it. Now, SourceTree will prompt us with this question mark here,
+
+22
+00:02:40,990 --> 00:02:47,890
+saying that there is a file created in to the repository to the local repository, which I don't track.
+
+23
+00:02:47,890 --> 00:02:57,100
+So, we need to ask Git, first of all, to track it by adding into to the index and then we need to commit this.
+
+24
+00:02:57,100 --> 00:03:03,880
+Let's give a meaningful message "initial commit" here and click the button commit.
+
+25
+00:03:03,880 --> 00:03:11,380
+Right now, the file is committed into the repository. As you can see in my local repository, there is this file.
+
+26
+00:03:11,380 --> 00:03:18,550
+But if we go to the remote repsitory on GitHub, we will see that this is still empty.
+
+27
+00:03:18,550 --> 00:03:23,200
+This is a case because when dealing with remote repositories, global repositories,
+
+28
+00:03:23,200 --> 00:03:31,810
+we need to do this extra step of sharing this, pushing this file into the global repository. In order to do that,
+
+29
+00:03:31,810 --> 00:03:39,870
+we navigate into our history. We see the local commit and we click the button push, selecting the branch
+
+30
+00:03:39,870 --> 00:03:45,700
+in which we would like to commit our changes, to push our changes.
+
+31
+00:03:45,700 --> 00:03:49,180
+Click OK now, SourceTree will upload,
+
+32
+00:03:49,180 --> 00:03:54,310
+will push everything to the remote repository. As you will see nothing has changed in our local file system.
+
+33
+00:03:54,310 --> 00:04:03,900
+But if we refresh this page, you will see that the Readme file exists now in our repository.
+
+34
+00:04:03,900 --> 00:04:07,470
+So this is the process that needs to be followed,
+
+35
+00:04:07,470 --> 00:04:13,530
+using SourceTree instead of the terminal that we've done in part 1 in order to stage and
+
+36
+00:04:13,530 --> 00:04:21,300
+commit files into a local repository and then publish it into a global repository.
+
+37
+00:04:21,300 --> 00:04:25,140
+Let's now invite a collaborator to work with on this project.
+
+38
+00:04:25,140 --> 00:04:31,620
+We go to settings, and then we click manage access where we invite our collaborators.
+
+39
+00:04:31,620 --> 00:04:36,870
+I have previously created a user that's called SamCollaborator.
+
+40
+00:04:36,870 --> 00:04:44,470
+We type the user name here and we add Sam into the repository.
+
+41
+00:04:44,470 --> 00:04:55,970
+Sam will now receive an email saying that they have been invited into a GitHub repository to work
+
+42
+00:04:55,970 --> 00:05:08,750
+with their corroborators. So if we open Sam's account now on GitHub and we paste this link, as you will see, this is now Sam working on GitHub.
+
+43
+00:05:08,750 --> 00:05:16,490
+Sam has to accept the invitation and now Sam has access to the repository, as you will see.
+
+44
+00:05:16,490 --> 00:05:20,750
+They can see the file stored remotely.
+
+45
+00:05:20,750 --> 00:05:26,330
+Of course, this is a clone that stored remotely in a global repository.
+
+46
+00:05:26,330 --> 00:05:31,910
+Sam has no access to these, into their local file system.
+
+47
+00:05:31,910 --> 00:05:40,580
+So let's say that on their computer, Sam navigates to the place where the repository needs to be cloned.
+
+48
+00:05:40,580 --> 00:05:45,830
+So all they need to do is to actually do a git clone and then paste the URL
+
+49
+00:05:45,830 --> 00:05:58,680
+that GitHub provides for cloning the repository.
+
+50
+00:05:58,680 --> 00:06:06,360
+Now if we navigate to Sam's filesystem, which is this folder here, let's pretend that this is another computer,
+
+51
+00:06:06,360 --> 00:06:18,540
+the repository is cloned and Sam has access to all the files into the filesystem.
+
+52
+00:06:18,540 --> 00:06:23,220
+Now we navigate to this repository, and we check the status.
+
+53
+00:06:23,220 --> 00:06:30,250
+We will see that everything is up to date with the master, the remote repository.
+
+54
+00:06:30,250 --> 00:06:35,860
+Let's start now the collaboration. Let's create
+
+55
+00:06:35,860 --> 00:06:51,120
+first of all, a new file for Sam, so let's say that Sam needs to create another file that it's called 
+
+56
+00:06:51,120 --> 00:07:00,030
+that includes some text into their local filesystem, so SamsFile.txt.
+
+57
+00:07:00,030 --> 00:07:08,740
+And includes some text. Sam saves the file.
+
+58
+00:07:08,740 --> 00:07:13,390
+If they do the same process as we always do, check the status.
+
+59
+00:07:13,390 --> 00:07:19,620
+Git will tell us that there is a new file that's not staged. So we need to add it, first of all.
+
+60
+00:07:19,620 --> 00:07:33,890
+And then we need to commit it with a meaningful message. The file is committed.
+
+61
+00:07:33,890 --> 00:07:36,230
+Of course, if we refresh, the repository,
+
+62
+00:07:36,230 --> 00:07:45,470
+we will not see the file here because we also need to do this extra step of pushing this file into remote repository.
+
+63
+00:07:45,470 --> 00:07:52,940
+This is done by typing the command git push origin master to declare that we like to push this
+
+64
+00:07:52,940 --> 00:08:01,390
+into the URL that we have in our file system into the .git folder and select the master branch.
+
+65
+00:08:01,390 --> 00:08:07,530
+So, if we do that Git is pushing, uploading, the changes. If we refresh,
+
+66
+00:08:07,530 --> 00:08:13,800
+we will see that Sam's file exists into the remote repository.
+
+67
+00:08:13,800 --> 00:08:26,280
+Of course, Thanos has no idea about this file yet because I need to pull changes from the remote repository to get everything, all the updates from there.
+
+68
+00:08:26,280 --> 00:08:33,600
+And as you can see, SourceTree provides us with the commit message and the changes that have been made.
+
+69
+00:08:33,600 --> 00:08:40,440
+If I now go to my filesystem, I will see that Sam's file exists here.
+
+70
+00:08:40,440 --> 00:08:49,940
+So let's now start collaborating. Let's say that Sam needs to start working on the Readme file and add some content.
+
+71
+00:08:49,940 --> 00:09:03,620
+So they open this file and they create Section 1.
+
+72
+00:09:03,620 --> 00:09:06,010
+When they are happy with their changes,
+
+73
+00:09:06,010 --> 00:09:18,200
+they can follow that classic process to actually add this to the commit and commit the file into their repository with a meaningful message.
+
+74
+00:09:18,200 --> 00:09:31,460
+And they are happy with the changes so they can push this into the remote repository as well. After they 
+
+75
+00:09:31,460 --> 00:09:39,590
+if we navigate to the remote repsitory, you will see that the Readme file is updated with Sam's addition.
+
+76
+00:09:39,590 --> 00:09:50,890
+However, let's say that in the meanwhile, Thanos has also started working on the Readme file without knowing that Sam is already working on it.
+
+77
+00:09:50,890 --> 00:09:55,910
+So as you will see in Thanos' local repository the file is still empty.
+
+78
+00:09:55,910 --> 00:10:05,980
+And let's say that I'm starting working on my section. I'm happy with the changes I've made.
+
+79
+00:10:05,980 --> 00:10:11,820
+I go following the classic process into SourceTree, SourceTree informs me that there is a new file,
+
+80
+00:10:11,820 --> 00:10:22,330
+there's a file that has changed so all we need to do is to add it and then commit.
+
+81
+00:10:22,330 --> 00:10:28,930
+Everything is fine. Of course, this is still not available online because I haven't pushed.
+
+82
+00:10:28,930 --> 00:10:36,930
+All I need to do is to click this push button to upload my changes to the remote repository.
+
+83
+00:10:36,930 --> 00:10:47,770
+However, if I do that, I will receive this message, this warning from GitHub, saying that the file that you have tried to pushed was outdated.
+
+84
+00:10:47,770 --> 00:10:58,060
+There is a new version online, so you need to pull this new version and then find out what is going to happen with the contents of this file.
+
+85
+00:10:58,060 --> 00:11:05,430
+So, all we need to do is to actually pull. Get all the changes from the remote repository.
+
+86
+00:11:05,430 --> 00:11:10,840
+And you will see here that SourceTree prompts with these merge conflicts error message,
+
+87
+00:11:10,840 --> 00:11:15,040
+saying that the file has some conflicts that need to be resolved.
+
+88
+00:11:15,040 --> 00:11:26,380
+So, in practise if we open this file in our editor, we will see that Git has added these strange tags here.
+
+89
+00:11:26,380 --> 00:11:35,440
+What these tags mean is that in the remote repsitory, we had these and you in your local added.
+
+90
+00:11:35,440 --> 00:11:41,020
+How should I proceed? Of course, in this case we can understand that Section 2 should go after Section 1.
+
+91
+00:11:41,020 --> 00:11:46,600
+So we make the changes, we delete these tags because they are not needed more, we resolved the conflict.
+
+92
+00:11:46,600 --> 00:11:55,420
+We save the file. And if we go into SourceTree, we can inform the tool that the conflicts are now resolved.
+
+93
+00:11:55,420 --> 00:12:07,160
+And all we need to do is to actually add, commit and push these files so we have this to the index, SourceTree
+
+94
+00:12:07,160 --> 00:12:13,110
+provides us with a meaningful message saying that there were some conflicts resolved into Readme.
+
+95
+00:12:13,110 --> 00:12:26,250
+If I commit this and then push we will be able to push the changes into the remote repository. So, if we refresh this you will see that now
+
+96
+00:12:26,250 --> 00:12:37,660
+the Readme file is correct and includes all the changes. Of course, if we navigate to Sam's filesystem, we need to pull in order to get to these changes.
+
+97
+00:12:37,660 --> 00:12:49,960
+If we open the Readme file from Sam's  filesystem, we will see that Sam now has that updated file, which is an exact copy of what Thanos has.
+
+98
+00:12:49,960 --> 00:13:03,790
+This is a tricky part of Git in which two people were working together on the same file without knowing that they do.
+
+99
+00:13:03,790 --> 00:13:07,750
+It's not a very difficult process to resolve these conflicts.
+
+100
+00:13:07,750 --> 00:13:18,130
+In most cases, it will be a straightforward way to remove tags, move text around or code to resolve these conflicts.
+
+101
+00:13:18,130 --> 00:13:25,930
+So let's do it once again, let's say, that Sam continuous working on the project.
+
+102
+00:13:25,930 --> 00:13:31,570
+I add some text here.
+
+103
+00:13:31,570 --> 00:13:38,130
+Again, let's pretend that this is what Sam wanted to do and they are quite happy with the results,
+
+104
+00:13:38,130 --> 00:13:47,730
+so they add these into commit and then they commit these.
+
+105
+00:13:47,730 --> 00:13:55,590
+And they push into the remote as intended.
+
+106
+00:13:55,590 --> 00:14:06,130
+After this is done, we will check the remote repository, which includes Sam's changes.
+
+107
+00:14:06,130 --> 00:14:12,130
+And let's say once again that Thanos had no idea about this,
+
+108
+00:14:12,130 --> 00:14:19,660
+the fact that someone was working on the same file in parallel and starts working on the file as well.
+
+109
+00:14:19,660 --> 00:14:26,580
+Add some more text.
+
+110
+00:14:26,580 --> 00:14:38,030
+Thanos is now happy with the changes, so I want to commit these changes and push to the remote repository.
+
+111
+00:14:38,030 --> 00:14:46,760
+I do the classic process and I try to push. I expect to receive the same error because there are conflicts.
+
+112
+00:14:46,760 --> 00:14:55,430
+So what GitHub prompts me to do is to actually pull to get the latest updates from the remote and then resolve the conflicts.
+
+113
+00:14:55,430 --> 00:15:02,090
+But as you will see here now, we don't have these exclamation mark saying that there were conflicts.
+
+114
+00:15:02,090 --> 00:15:10,550
+This is because Git is quite clever to understand that the changes made by the two different
+
+115
+00:15:10,550 --> 00:15:16,130
+collaborators on the same file happened on two distinctive parts of the file.
+
+116
+00:15:16,130 --> 00:15:25,220
+So, Git was able to automatically resolve these conflicts and places, the text, where appropriate,
+
+117
+00:15:25,220 --> 00:15:32,090
+without giving us these strange tags, asking us to do the resolution manually.
+
+118
+00:15:32,090 --> 00:15:37,220
+So, all we need to do as the conflicts are automatically resolved,
+
+119
+00:15:37,220 --> 00:15:41,030
+we just need to check the file is as expected, which is.
+
+120
+00:15:41,030 --> 00:15:46,760
+And we just need to commit this version that Git created for us.
+
+121
+00:15:46,760 --> 00:15:58,610
+So again we do the classic process of merging the conflicts and pushing that into the remote repository.
+
+122
+00:15:58,610 --> 00:16:09,600
+If we now navigate to the reemote repository we will see that everything is fine, as expected, without needing to do any manual conflict resolution.
+
+123
+00:16:09,600 --> 00:16:14,400
+Of course, if we pull this from Sam's machine,
+
+124
+00:16:14,400 --> 00:16:25,680
+we will see that the Readme file on Sam's filesystem is updated successfully and includes the text that we needed to include.
+
+125
+00:16:25,680 --> 00:16:33,060
+So even if you are working on the same file, but in distinctive regions,
+
+126
+00:16:33,060 --> 00:16:42,800
+Git we be able to resolve the conflicts that you created, automatically without needing your intervention.
+
+127
+00:16:42,800 --> 00:16:46,440
+So, conflicts, although it's a tricky part of Git,
+
+128
+00:16:46,440 --> 00:16:56,960
+and any collaboration, it's not something that most of the times will require your intervention.
+
+129
+00:16:56,960 --> 00:17:00,680
+It is quite common in code projects to actually work on different files.
+
+130
+00:17:00,680 --> 00:17:07,100
+It's not the case that two people will work on the same classes, for example, which are represented a single file.
+
+131
+00:17:07,100 --> 00:17:13,760
+However, even if this is the case, there are great chances that Git will resolve this problem automatically.
+
+132
+00:17:13,760 --> 00:17:22,230
+And if not, it will inform you using this taags about the text, the code, that appears online and what you have added.
+
+133
+00:17:22,230 --> 00:17:29,170
+So you need to move around text to resolve these manually.
+
+134
+00:17:29,170 --> 00:17:40,000
+This concludes most of the things that you will need to do using Git when working on either on a single user
+
+135
+00:17:40,000 --> 00:17:44,650
+project or multi-user, collaborative environments.
+
+136
+00:17:44,650 --> 00:17:51,100
+GitHub is a very nice place to store a remote repositories that enable collaboration.
+
+137
+00:17:51,100 --> 00:18:00,880
+You can have access to unlimited GitHub, private GitHub, repositories if you navigate to this website education.github.com,
+
+138
+00:18:00,880 --> 00:18:09,160
+and log-in with your @york.ac.uk account.
+
+139
+00:18:09,160 --> 00:18:16,150
+Except the limited private repositories that you have access to, you also have access to learning
+
+140
+00:18:16,150 --> 00:18:28,760
+material and some tools that will be very helpful if you decide to work with Git.
+

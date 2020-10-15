@@ -1,0 +1,520 @@
+1
+00:00:01,860 --> 00:00:08,580
+Hello, welcome to this first part of the practical that will show you how to use Git,
+
+2
+00:00:08,580 --> 00:00:16,110
+the most widely used version control system. In order to, first of all, be able to start working with Git
+
+3
+00:00:16,110 --> 00:00:21,420
+you need to have it installed. If you are Linux or Mac OS, then you're all set up.
+
+4
+00:00:21,420 --> 00:00:24,630
+Git is coming preinstalled with your operating system.
+
+5
+00:00:24,630 --> 00:00:32,460
+If you are on Windows, though, you need to navigate to this website to download Git. Download the executable and install it.
+
+6
+00:00:32,460 --> 00:00:37,260
+After you do so, you will be able to start an application that is installed in your machine.
+
+7
+00:00:37,260 --> 00:00:41,130
+That's called Git-Bash.
+
+8
+00:00:41,130 --> 00:00:46,080
+Using Git-Bash you will be able to use Git by a terminal on Windows. 
+
+9
+00:00:46,080 --> 00:00:51,860
+Everything I will describe in this first part is also available as a script on this website,
+
+10
+00:00:51,860 --> 00:01:00,420
+which describes step by step, the exercise that you're going to do to work in a single user manner.
+
+11
+00:01:00,420 --> 00:01:10,000
+That means with no collaboration involved. So let's start. First of all, if you would like to use Git, you need to configure it. In order to do that,
+
+12
+00:01:10,000 --> 00:01:17,960
+we need to tell it about some information about ourselves, like our name and our e-mail address that Git should use.
+
+13
+00:01:17,960 --> 00:01:25,280
+So this is done by typing this command to configure the global properties of Git on our machine.
+
+14
+00:01:25,280 --> 00:01:34,940
+So in the first one we define our name using is command.
+
+15
+00:01:34,940 --> 00:01:51,610
+And the second one to configure our email address. We need to configure the parameter user.email.
+
+16
+00:01:51,610 --> 00:01:58,690
+You should put here your name and your e-mail that Git should use to identify you as a user.
+
+17
+00:01:58,690 --> 00:02:04,840
+So this is all done. It now knows about ourselves and we are ready to start versioning our software.
+
+18
+00:02:04,840 --> 00:02:09,150
+So let's say that we need to create a new project and put it inside a folder.
+
+19
+00:02:09,150 --> 00:02:17,350
+So, the first step is to create that folder. I will create a directory by typing this command.
+
+20
+00:02:17,350 --> 00:02:25,100
+Let's name it LearnGit. What this actually does, it creates a folder so you can actually, in your operating system,
+
+21
+00:02:25,100 --> 00:02:32,000
+create this folder using the file explorer of your system. As you will see if I get in here,
+
+22
+00:02:32,000 --> 00:02:39,080
+this is an empty project. It's an empty folder. This is where we will start creating our files.
+
+23
+00:02:39,080 --> 00:02:45,280
+So I navigate in there. Here you will see that it is empty.
+
+24
+00:02:45,280 --> 00:02:52,840
+So, the first thing that we need to do is to create our first files, those that we would like Git to start versioning.
+
+25
+00:02:52,840 --> 00:03:06,580
+We can do that by simply creating a new text file, for example, using one of our text editors or by using this UNIX command that actually creates...
+
+26
+00:03:06,580 --> 00:03:10,950
+... a new file with the content typed inside the quotes.
+
+27
+00:03:10,950 --> 00:03:17,630
+So let's name this file Readme.txt. So we'll see that this file is now created.
+
+28
+00:03:17,630 --> 00:03:21,170
+If we open it, it has this text inside.
+
+29
+00:03:21,170 --> 00:03:30,470
+Again, you could just create this text file by using one of your favourite text editors and store it inside the folder you've just created.
+
+30
+00:03:30,470 --> 00:03:37,050
+So now we need to tell Git to start a repository, a versioning repository inside this LearnGit folder.
+
+31
+00:03:37,050 --> 00:03:46,740
+Now to do that, we just need to type git init. Of course, you need to remember that you need to be inside this folder in your terminal,
+
+32
+00:03:46,740 --> 00:03:53,140
+so that Git reepository is created in the folder where your command prompt is actually right now.
+
+33
+00:03:53,140 --> 00:03:54,990
+So, LearnGit foldel in my case.
+
+34
+00:03:54,990 --> 00:04:06,630
+As you will see, this creates a folder that has stored all the information needed by Git to version our software.
+
+35
+00:04:06,630 --> 00:04:09,270
+This is not needed. It's something that it's actually hidden.
+
+36
+00:04:09,270 --> 00:04:16,020
+You might not see it if you haven't got the hidden files shown enabled in your operating system.
+
+37
+00:04:16,020 --> 00:04:25,040
+This is all the infrastructure that Git needs to track the software. So at these stage, it knows nothing about our files.
+
+38
+00:04:25,040 --> 00:04:34,910
+So the first thing we need to do in order to track a file, so in order to tell it to version our file is to actually do what's called a stage.
+
+39
+00:04:34,910 --> 00:04:41,330
+So by staging the file, we let Git know that it needs to start monitoring this file.
+
+40
+00:04:41,330 --> 00:04:47,300
+This is done by typing this command, git add and then typing the name of the file that we'd like to track.
+
+41
+00:04:47,300 --> 00:04:58,910
+So in this case, git add Readme.txt. So, If I now type git status.
+
+42
+00:04:58,910 --> 00:05:03,910
+Git will tell us that there is a new file that is not committed yet.
+
+43
+00:05:03,910 --> 00:05:08,770
+So it's tracked, but I don't know as I haven't versioned it yet.
+
+44
+00:05:08,770 --> 00:05:14,230
+So, we need to go to the next step that tells Git start,
+
+45
+00:05:14,230 --> 00:05:19,210
+commit these changes. Commit this file. Create a version of this file in your repository.
+
+46
+00:05:19,210 --> 00:05:27,490
+So this is done by typing git commit, then the parameter -m which declares that he would like to keep a message for this commit,
+
+47
+00:05:27,490 --> 00:05:33,010
+this would be useful in case we're tracking back our commits to find out what happened here.
+
+48
+00:05:33,010 --> 00:05:40,920
+So here we can just say creation of the Readme file.
+
+49
+00:05:40,920 --> 00:05:47,070
+It has to be something this descriptive so you remember what happened in this commit.
+
+50
+00:05:47,070 --> 00:05:59,880
+If we type this we receive this box saying that the file, the Readme file was committed to the repository.
+
+51
+00:05:59,880 --> 00:06:10,960
+If we type git log, we will see the history of our commits, which here is just one, we committed a file here.
+
+52
+00:06:10,960 --> 00:06:17,390
+And the author who committed the file is this one.
+
+53
+00:06:17,390 --> 00:06:23,540
+Now Git keeps track of our files and versions them.
+
+54
+00:06:23,540 --> 00:06:31,910
+Let's go and create a new file. So we can create this new file by typing this command.
+
+55
+00:06:31,910 --> 00:06:37,850
+Or, of course, you can go to your favourite text editor store and create this file manually,
+
+56
+00:06:37,850 --> 00:06:45,080
+save it into your Git repository in the folder that you created previously.
+
+57
+00:06:45,080 --> 00:06:52,710
+Now this new file is created. If you type git status again,
+
+58
+00:06:52,710 --> 00:07:06,920
+you will see that Git informs us that there is a new file that it is untracked, so we haven't instructed Git yet to start versioning this file.
+
+59
+00:07:06,920 --> 00:07:13,730
+Let's leave it as it is right now and go back to the Readme file that we created previously.
+
+60
+00:07:13,730 --> 00:07:24,260
+And let's go and start a new line. So this is a new line. And save it.
+
+61
+00:07:24,260 --> 00:07:30,700
+Now, if you type git status here, you will see that,
+
+62
+00:07:30,700 --> 00:07:36,160
+there is a file the Git knows about, Readme.txt and versions it, which is modified.
+
+63
+00:07:36,160 --> 00:07:47,380
+And there is also the new file that we created that Git knows nothing about it and it's not tracking.
+
+64
+00:07:47,380 --> 00:07:56,650
+The reason why we're doing this is that at some projects we would like to ignore, to ask Git to ignore files like these that
+
+65
+00:07:56,650 --> 00:07:58,570
+we don't want them to be versioned.
+
+66
+00:07:58,570 --> 00:08:08,290
+For example, binary files in coding projects, is not a good practise to be tracked because they are generated automatically at build time.
+
+67
+00:08:08,290 --> 00:08:16,060
+Git offers a way to instruct it to ignore files from versioning forever so they're not
+
+68
+00:08:16,060 --> 00:08:20,500
+appear as untracked files. Git knows that the user does not want to track this file.
+
+69
+00:08:20,500 --> 00:08:24,460
+Just ignore it. In order to create that, we need to create
+
+70
+00:08:24,460 --> 00:08:35,260
+a new file that is called .gitignore and add to it those file names of the files that we need to ignore.
+
+71
+00:08:35,260 --> 00:08:43,900
+For example, this command creates this .gitignore file here and adds into it a new line,
+
+72
+00:08:43,900 --> 00:08:49,050
+this newFilee.txt, that is the file name that would like to ignore.
+
+73
+00:08:49,050 --> 00:08:55,770
+What this actually creates is, it creates a new file so you can create it on your own using your favourite text editor
+
+74
+00:08:55,770 --> 00:09:01,830
+that has line by line the files that Git needs to ignore.
+
+75
+00:09:01,830 --> 00:09:09,900
+So if we've now type git status again you will see that Git knows about the Readme.txt file.
+
+76
+00:09:09,900 --> 00:09:14,400
+It says that I track this but it is modified, but it's not versioned yet.
+
+77
+00:09:14,400 --> 00:09:18,400
+And also it says that there is a new file that's called .gitignore
+
+78
+00:09:18,400 --> 00:09:22,830
+that I don't know about it.
+
+79
+00:09:22,830 --> 00:09:27,570
+What you need to do is to ask Git to actually track this .gitignore file
+
+80
+00:09:27,570 --> 00:09:42,730
+and we do that by git add .gitignore.
+
+81
+00:09:42,730 --> 00:09:55,170
+And we need to commit it to the repository. Gitignore creation.
+
+82
+00:09:55,170 --> 00:10:01,730
+If we type git status, we will see that Git ignored completely the newFile.
+
+83
+00:10:01,730 --> 00:10:11,360
+Whatever we do to this file, it will be ignored by Git. And it only tracks the file that we would like to track, which is the Readme file.
+
+84
+00:10:11,360 --> 00:10:15,380
+Now this  Readmme file is modified.
+
+85
+00:10:15,380 --> 00:10:33,500
+We can just simply stage it as before and we can commit it with the classic command, commit -m and a message.
+
+86
+00:10:33,500 --> 00:10:40,980
+Now, check the status of our repository. It says that there is one file changed, there are two insertions in this file and nothing else.
+
+87
+00:10:40,980 --> 00:10:47,100
+Everything is versioned. Nothing has changed. I don't know any file that it is untracked.
+
+88
+00:10:47,100 --> 00:10:53,520
+Everything is up to date. So, this is the basic things that one does with versioning files.
+
+89
+00:10:53,520 --> 00:10:55,470
+What we do is that we actually create the files.
+
+90
+00:10:55,470 --> 00:11:07,470
+We add them at Git and then we can commit them. When we make changes, add them again and we commit them to a repository.
+
+91
+00:11:07,470 --> 00:11:18,120
+An important part of working with Git is the possibility of creating branches. As described in the lecture branches are new paths that
+
+92
+00:11:18,120 --> 00:11:23,220
+share the same code base with previous branches.
+
+93
+00:11:23,220 --> 00:11:30,990
+In order to create a new branch, we need to tell Git to actually do a checkout of a new branch.
+
+94
+00:11:30,990 --> 00:11:38,180
+So with type git checkout, the flag -b and then the name of the new branch that we would like to create.
+
+95
+00:11:38,180 --> 00:11:48,540
+Let's name it myNewBranch. Git informs us that it switched to the new branch which is called myNewBranch.
+
+96
+00:11:48,540 --> 00:11:54,510
+As you will see here in my folder, nothing has changed because now we have two branches, the master,
+
+97
+00:11:54,510 --> 00:12:00,720
+which is always the main master branch in Git and the new branch which called myNewBranch,
+
+98
+00:12:00,720 --> 00:12:06,960
+which actually has exactly the same code base, exactly the same status with the master.
+
+99
+00:12:06,960 --> 00:12:20,190
+What we can do right now is we can start working on these new branch without affecting the code into the master branch.
+
+100
+00:12:20,190 --> 00:12:27,510
+If we type git branch, you will see that it informs us of all the available branches in this repository,
+
+101
+00:12:27,510 --> 00:12:36,640
+which are the master and the myNewBranch, which is actually highlighted because it is the current branch that were working on.
+
+102
+00:12:36,640 --> 00:12:45,720
+Let's go and create a file into our repository, which
+
+103
+00:12:45,720 --> 00:13:03,000
+we would like to to keep only in this branch. We can go here and type this and name it as branchFile.txt
+
+104
+00:13:03,000 --> 00:13:20,300
+As you'll see here, the new file, the  branchFile is created, and includes that text that we added to it.
+
+105
+00:13:20,300 --> 00:13:27,020
+Again, you can create this files manually using your file explorer.
+
+106
+00:13:27,020 --> 00:13:38,390
+If I type git status here, you will see again that Git says that there is a new file that I don't know about it because it was not added, it was not staged,
+
+107
+00:13:38,390 --> 00:13:48,220
+so I don't know if it has previous versions or new versions. What we need to do here is to actually add this file
+
+108
+00:13:48,220 --> 00:14:05,670
+to Git and commit it. With a descriptive message.
+
+109
+00:14:05,670 --> 00:14:15,090
+Now Git is up to date. Everything is committed. But remember that this is committed to the new branch that we have created.
+
+110
+00:14:15,090 --> 00:14:19,500
+That means that if we checkout to the master branch,
+
+111
+00:14:19,500 --> 00:14:23,280
+so the main branch that we've started everything,
+
+112
+00:14:23,280 --> 00:14:30,720
+you will see that the file that we created has actually disappeared because now we are on the master branch,
+
+113
+00:14:30,720 --> 00:14:36,050
+that has no idea about what happened in myNewBranch. But, don't worry,
+
+114
+00:14:36,050 --> 00:14:42,890
+this file has not been lost because Git keeps track of all the files in separate branches.
+
+115
+00:14:42,890 --> 00:14:56,730
+If we now checkout to my to the new branch that we have created previously, you will see that the file appears again.
+
+116
+00:14:56,730 --> 00:15:06,570
+So this is it. This is how we create a new branch. Let's say, now that we are happy with what we have created in this new branch,
+
+117
+00:15:06,570 --> 00:15:11,460
+the code that we've developed into this branch works fine and we would like
+
+118
+00:15:11,460 --> 00:15:18,930
+to merge, to put everything back into the master so our releases actually know about it.
+
+119
+00:15:18,930 --> 00:15:27,840
+What we need to do is to actually switch back to the branch, which is where we'd like to merge things into,
+
+120
+00:15:27,840 --> 00:15:29,610
+so this is the master branch in our case.
+
+121
+00:15:29,610 --> 00:15:41,010
+What we need to do is to call the git merge command by typing the name of the branch that we would like to merge into the current branch,
+
+122
+00:15:41,010 --> 00:15:45,230
+the master branch that we are right now.
+
+123
+00:15:45,230 --> 00:15:54,380
+Now Git merged everything back successfully. As you will notice from typing this command, you will see that we are on the master branch
+
+124
+00:15:54,380 --> 00:16:01,190
+but now we have the branched file as well, because we have merged our new branch into the master branch
+
+125
+00:16:01,190 --> 00:16:09,140
+nd now the master brands is up to date. So actually, the fork that we've made is merged back into the master.
+
+126
+00:16:09,140 --> 00:16:18,440
+These are the basic things that you will, the 80%, I would say, of the things that you would do when working with a Git on your projects.
+
+127
+00:16:18,440 --> 00:16:25,010
+But this leads us to the most tricky part of Git that has to do with collaboration.
+
+128
+00:16:25,010 --> 00:16:32,390
+How we can perform activities where more than one people are working on the same files,
+
+129
+00:16:32,390 --> 00:16:41,990
+on the same project. So, this will be the collaborative part of Git will be demonstrated in the second part of this
+
+130
+00:16:41,990 --> 00:16:45,560
+demo.
+
