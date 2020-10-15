@@ -1,9 +1,9 @@
 Version Control
 ===============
 
-Repository for Version Control lecture for University of York's SEPR module.
+Repository for Version Control lecture for University of York's Department of Computer Science.
 
-Lecture is being held on 17-18 Oct 2019.
+Lecture is being held in October 2020.
 
 © The slides and the practical session are inspired by Jose Calderon's work. Images are taken from wikimedia and pixabay and are labelled as free for reuse.
 
@@ -11,16 +11,16 @@ Lecture is being held on 17-18 Oct 2019.
 Why You're Here
 ===============
 
-As you will find out if you skim the slides, Version Control Systems (VCSs from now on) are widely used nowadays to keep track of changes in code, enhance collaboration and keep backups. Many of you may had never heard this term before but don't worry, I firstly heard about VCSs 6 years after my first CS module at a university level so taking into account that you're 2nd years students I am sure that you will master them.
+As you will find out if you skim the slides, Version Control Systems (VCSs from now on) are widely used nowadays to keep track of changes in code, enhance collaboration and keep backups. 
 
-This document includes instructions on the 1st, 2nd and 3rd part of the practical session that follows the theory. On the practical we will focus on the (maybe the most) widely used VCS named Git. SVN is popular as well so for those who prefer to use SVN instead of Git there's a file, called SVN-links.md (provided by Jose Calderon), where you can find useful resources for it. In case you want to share more resources on Git or SVN please drop me an email at thanos.zolotas@york.ac.uk or submit them through a pull request in this Git project.
+This document includes instructions on the practical session that follows the theory. On the practical we will focus on the (maybe the most) widely used VCS named Git. SVN is popular as well so for those who prefer to use SVN instead of Git there's a file, called SVN-links.md (provided by Jose Calderon), where you can find useful resources for it. In case you want to share more resources on Git or SVN please drop me an email at thanos.zolotas@york.ac.uk or submit them through a pull request in this Git project.
 
 As shown in the slides, there are different GUIs for Git that can be used (and may make your life easier if you're not fan of the command line). I personally prefer to use GUIs and more specifically "SourceTree" which is available to download from [here.](https://www.sourcetreeapp.com/) For the 1st part of the practical we will work using the terminal as we need to perform simpler tasks. During the 2nd part where I will demostrate the collaborative aspects of Git I will use SourceTree.
 
 Part 1: The Basics (aka the 80% of what you will ever do with Git in your life)
 ========================
 
-In the first part you will be asked to do some exercises on your own to understand the basic functionality of Git. Before starting with the exercises, you need to make sure that you have Git installed and configured. Instructions follow. In case you have any problems ask the PTAs or myself for help.
+The first part consists of some exercises that will help you understand the basic functionality of Git. Before starting with the exercises, you need to make sure that you have Git installed and configured. Instructions follow. 
 
 
 Installing Git
@@ -129,7 +129,7 @@ vi] The file is now tracked, but we need to commit it to the repository. This is
 git commit -m "Creation of the Readme file"
 ~~~
 
-Where "Creation of the Readmin file" is a short description of what are the changes that we are about to commit to the repository. In this case just the fact that we created the Readme file.
+Where "Creation of the Readme file" is a short description of what are the changes that we are about to commit to the repository. In this case just the fact that we created the Readme file.
 
 You can now check the `git log` to see the history of your repository.
 
@@ -263,16 +263,8 @@ This leads us to the most tricky part of Git which has to do with collaboration.
 
 Part 2: Collaboration (aka conflicts!)
 ========================
+During this part we work using a GUI rather than the terminal for Git. I selected SourceTree - you can pick your favorite as most of them work the same way.
+We will then work on a common scenario of collaboration that involves conflicts.
 
-At the beginning I will show you how to work using a GUI rather than the terminal for Git. I selected SourceTree - you can pick your favorite as most of them work the same way.
-I will then demo you a common scenario of collaboration that involves conflicts.
-
-Part 3: Collaborate with your team members
-========================
-Having a versioning system for your team's project is not a requirement for SEPR however it will help you develop software by following the standards that are now followed in the industry. I encourage you to use one. Those teams who want to use one can spent the time left to do some work on it. 
-
-For example you can check different GUIs and find the one that works best for you individually (rememeber you don't need to use the same. Some members of your team may prefer the terminal, others SourceTree and so on.) 
-Then register for a Git repository. Pick the provider you prefer. I suggest either GitHub or BitBucket. Try to share (add, commit, push) some of the artefacts you already created during your first meetings. Try to edit the same files, commit/push them and resolve conflicts. 
-
-Remember that the best way to learn is by failing so don't worry if you see red messages after you pushed or pulled something. Try to understand why it happened and fix it. We are more than happy to help.
+Please refer to the respective video for the excercises regarding the collaborative feature of Git. You can work with one of your classmates and experiment with it by trying to replicate what I am showing. One of you will need to do the actions "Thanos" is doing in the video and the other one, those "Sam" is doing. 
 
